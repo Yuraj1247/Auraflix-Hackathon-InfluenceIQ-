@@ -6,11 +6,11 @@ import Card from './Card';
 
 ChartJS.register(RadialLinearScale, PointElement, LineElement, Filler, Tooltip, Legend, CategoryScale, LinearScale);
 
-const YOUTUBE_API_KEY = 'AIzaSyC6_RMwcTcAQ_lG3jre-L9OSB07ptmZzSg';
-const NEWS_API_KEY = 'd9a77ab91f864c56bb9a8b20dd880552';
+const YOUTUBE_API_KEY = '';
+const NEWS_API_KEY = '';
 const GOOGLE_SEARCH_KEY = YOUTUBE_API_KEY;
-const SEARCH_ENGINE_ID = 'f57014ae660654d20';
-const RAPIDAPI_KEY = '430e2fa2f1msh3bfe09f35003f4cp106447jsn0006cab56363';
+const SEARCH_ENGINE_ID = '';
+const RAPIDAPI_KEY = '';
 
 function Analysis() {
   const [youtubeLink, setYoutubeLink] = useState('');
