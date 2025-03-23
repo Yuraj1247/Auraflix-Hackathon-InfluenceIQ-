@@ -1,0 +1,44 @@
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+body { background: linear-gradient(45deg, #1e1e3a, #2a2a5e, #3a3a8e); background-size: 200% 200%; animation: gradientShift 15s ease infinite; color: #fff; line-height: 1.6; overflow-x: hidden; }
+@keyframes gradientShift { 0% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } 100% { background-position: 0% 50%; } }
+.navbar { position: fixed; width: 100%; padding: 20px 5%; background: rgba(10, 10, 35, 0.9); backdrop-filter: blur(10px); z-index: 1000; display: flex; justify-content: space-between; align-items: center; }
+.logo { font-size: 28px; font-weight: 700; background: linear-gradient(45deg, #00d4ff, #ff00ff); -webkit-background-clip: text; color: transparent; }
+.nav-links { display: flex; gap: 30px; }
+.nav-links a { color: #fff; text-decoration: none; font-weight: 500; transition: color 0.3s; }
+.nav-links a:hover { color: #00d4ff; }
+.hamburger { display: none; font-size: 28px; cursor: pointer; color: #00d4ff; }
+.section { min-height: 100vh; padding: 0 5%; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; background: transparent; }
+.section-title { font-size: clamp(2rem, 5vw, 3rem); margin-bottom: 40px; color: #00d4ff; }
+.section p { font-size: clamp(1rem, 2vw, 1.25rem); max-width: 800px; margin: 0 auto 30px; color: #d0d0ff; }
+.cta-btn { padding: 12px 30px; background: #00d4ff; color: #0a0a23; border: none; border-radius: 5px; font-weight: 600; cursor: pointer; transition: all 0.3s; }
+.cta-btn:hover { background: #ff00ff; transform: translateY(-3px); }
+.input-container { max-width: 800px; margin: 20px auto; display: flex; flex-wrap: wrap; gap: 15px; justify-content: center; }
+.input-container input { padding: 12px; border: none; border-radius: 5px; background: rgba(255, 255, 255, 0.1); color: #fff; width: 300px; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; max-width: 1200px; margin: 0 auto; }
+.card { padding: 25px; background: rgba(255, 255, 255, 0.05); border-radius: 15px; transition: transform 0.3s; max-height: 500px; overflow-y: auto; }
+.card:hover { transform: translateY(-10px); }
+.card h3 { color: #00d4ff; margin-bottom: 20px; font-size: 1.5rem; }
+.avatar { width: 100px; height: 100px; border-radius: 50%; margin: 0 auto 15px; transition: transform 0.3s; }
+.avatar:hover { transform: scale(1.1); }
+.chart-container { margin-top: 20px; max-width: 100%; }
+.heatmap { display: grid; grid-template-columns: repeat(5, 1fr); gap: 5px; margin-top: 20px; }
+.heatmap div { width: 40px; height: 40px; background: #ff00ff; border-radius: 5px; }
+.timeline { margin-top: 20px; overflow-x: auto; white-space: nowrap; }
+.timeline-item { display: inline-block; padding: 10px 20px; background: #00d4ff; color: #0a0a23; border-radius: 5px; margin-right: 10px; }
+.export-btn { margin: 20px auto 0; padding: 10px 20px; background: #ff00ff; color: #fff; border: none; border-radius: 5px; cursor: pointer; display: block; }
+.form-container { max-width: 600px; margin: 0 auto; }
+.form-container input, .form-container textarea { width: 100%; padding: 12px; margin-bottom: 15px; border: none; border-radius: 5px; background: rgba(255, 255, 255, 0.1); color: #fff; }
+.faq-item { max-width: 800px; margin: 20px auto; text-align: left; }
+.faq-item h4 { color: #00d4ff; margin-bottom: 10px; }
+.footer { padding: 40px 5%; background: rgba(10, 10, 35, 0.9); text-align: center; font-size: 0.9rem; border-top: 1px solid rgba(255, 255, 255, 0.1); }
+@media (max-width: 768px) {
+    .hamburger { display: block; }
+    .nav-links { position: fixed; top: 0; right: -100%; width: 70%; height: 100vh; background: #0a0a23; flex-direction: column; align-items: center; padding-top: 100px; transition: right 0.3s; }
+    .nav-links.active { right: 0; }
+    .input-container { flex-direction: column; align-items: center; }
+    .input-container input { width: 100%; }
+    .grid { grid-template-columns: 1fr; }
+    .heatmap div { width: 30px; height: 30px; }
+    .card { max-height: 400px; }
+    .footer { padding: 20px 5%; }
+}
